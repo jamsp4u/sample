@@ -1,0 +1,15 @@
+class HelloWorld {
+    public static void main(String[] args) {
+        String s="AirAsai-airAsia-AiRasia";
+        String[] m=s.split("-");
+        int count=0;
+        for(String c:m){
+            if(c.toLowerCase().contains("Air".toLowerCase())){
+                count++;
+            }
+            // System.out.println(c);
+        }
+        System.out.println(count);
+    }
+    
+}
