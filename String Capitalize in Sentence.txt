@@ -1,0 +1,44 @@
+class HelloWorld {
+    public static void main(String[] args) {
+       String s="jambUkeshWar s puJari jamkhandi bangalore";
+       String m="";
+       for(int i=0;i<s.length();i++){
+        if(Character.isLowerCase(s.charAt(i)) || s.charAt(i)==' '){
+        if(i==0){
+            int ascii=s.charAt(i);
+            char c=(char)(ascii+65-97);
+            m=m+c;
+        }
+        else if(s.charAt(i)==' '){
+            m=m+s.charAt(i);
+            i++;
+            if(Character.isLowerCase(s.charAt(i))){
+            int ascii=s.charAt(i);
+            char c=(char)(ascii+65-97);
+            m=m+c;
+            }
+            else{
+                m=m+s.charAt(i);
+                continue;
+            }
+            
+        }
+        else{
+           m=m+s.charAt(i); 
+        }
+        }
+        else 
+        {
+            if(Character.isUpperCase(s.charAt(i)) && i!=0){
+            int ascii=s.charAt(i);
+            char c=(char)(ascii+97-65);
+            m=m+c;
+            }
+       
+        }
+       }
+    
+       System.out.println(m);
+       
+    }
+}
